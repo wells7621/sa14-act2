@@ -1,0 +1,66 @@
+body {
+    background-color: #DFF5FF;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+}
+
+header {
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Helvetica", sans-serif;
+    font-weight: normal;
+    font-size: 17px;
+    text-align: center;
+    background-color: #ffffff;
+    height: 50px;
+    line-height: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-weather-container {
+    display: flex;
+}
+
+.form-container {
+    margin-right: 50px;
+    padding-left: 20px;
+    padding-top: 50px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.submit-button {
+    width: 100%;
+}
+
+.weather-info {
+    float: right;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+
+.weather-info h3,
+.weather-info h4,
+.weather-info p {
+    font-weight: normal;
+}
+
+.hidden {
+    display: none;
+}
