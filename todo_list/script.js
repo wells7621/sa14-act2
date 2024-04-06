@@ -1,13 +1,13 @@
 const taskForm = document.getElementById('taskForm');
 const taskList = document.getElementById('taskList');
 
-taskForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+taskForm.addEventListener('submit', function(event) {
+    event.preventDefault();
 
     const taskTitle = document.getElementById('taskTitle').value;
     const taskDetails = document.getElementById('taskDetails').value;
 
-    if (taskTitle !== '') { // Check if title is not empty
+    if (taskTitle !== '') { 
         addTask(taskTitle, taskDetails);
         taskForm.reset();
     } else {
