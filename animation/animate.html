@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Sun to Moon Animation</title>
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                background-color: rgb(75, 207, 250);
+                transition: background-color 1s ease;
+            }
+
+            #sun {
+                width: 100px;
+                height: 100px;
+                background-color: #ffcc00;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            .move {
+                animation: sunToMoon 4s infinite alternate ease-in-out;
+            }
+
+            @keyframes sunToMoon {
+                0% {
+                    background-color: #ffcc00;
+                    top: 50%;
+                }
+                100% {
+                    background-color: #c0c0c0; 
+                    top: 10%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="sun"></div>
+        <button id="controlButton">Click Me</button>
+
+        <script>
+            const sunToMoon = document.getElementById('sun');
+            const controlButton = document.getElementById('controlButton');
+            let buttonClicked = false;
+
+            controlButton.addEventListener('click', function() {
+                sunToMoon.classList.toggle('move');
+                buttonClicked = !buttonClicked;
+
+                if (buttonClicked) {
+                    document.body.style.background = '#00172D';
+                    controlButton.textContent = 'Reset';
+                } else {
+                    document.body.style.background = 'rgb(75, 207, 250)';
+                    controlButton.textContent = 'Click Me';
+                }
+            });
+        </script>
+    </body>
+</html>
